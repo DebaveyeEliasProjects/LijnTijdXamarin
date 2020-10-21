@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LijnTijd.MainPage"
+             Title="Lijntijd"
+             BackgroundColor="#efefef">
+
+    <StackLayout Padding="16">
+        <Label Text="Radius" FontSize="16" FontAttributes="Bold"></Label>
+        <Grid Margin="0,16">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80*"/>
+                <ColumnDefinition Width="20*"/>
+            </Grid.ColumnDefinitions>
+            <Slider Grid.Column="0" ValueChanged="RadiusSlider_OnValueChanged" x:Name="radiusSlider" Minimum="0" Maximum="2000" />
+            <Label HorizontalOptions="End" x:Name="lblRadiusChanger" Grid.Column="1" Text="0 meter"></Label>
+        </Grid>
+        <Button Pressed="Button_OnPressed" Text="vind Dichtbije haltes" BackgroundColor="#eecc00"></Button>
+    </StackLayout>
+</ContentPage>

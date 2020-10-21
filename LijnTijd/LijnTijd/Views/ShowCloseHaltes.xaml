@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LijnTijd.Views.ShowCloseHaltes">
+    <StackLayout Padding="16">
+
+        <ListView x:Name="lstViewShowHaltes" RowHeight="60">
+
+            <ListView.ItemTemplate>
+
+                <DataTemplate>
+
+                    <ViewCell>
+                        <Grid Padding="8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="15*"></ColumnDefinition>
+                                <ColumnDefinition Width="85*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Frame Grid.Column="0" Padding="8" BackgroundColor="Transparent" >
+                                <Image  WidthRequest="8"  HeightRequest="8" Source="{Binding Image}"/>
+                            </Frame>
+                           
+                            <StackLayout Grid.Column="1">
+                                <Label Text="{Binding Name}" FontSize="16" FontAttributes="Bold"/>
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="50*" />
+                                        <ColumnDefinition Width="50*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="Afstand: " FontSize="14" FontAttributes="Bold"/>
+                                                <Span Text="{Binding Distance }" FontSize="14" />
+                                                <Span Text=" meter" FontSize="14" />
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                </Grid>
+                            </StackLayout>
+
+</Grid>
+
+                        
+
+                    </ViewCell>
+
+                </DataTemplate>
+
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+    </StackLayout>
+</ContentPage>
