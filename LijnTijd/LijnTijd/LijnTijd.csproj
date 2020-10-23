@@ -12,10 +12,12 @@
 
   <ItemGroup>
     <None Remove="Assets\bus-stop.png" />
+    <None Remove="Assets\info.png" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Assets\bus-stop.png" />
+    <EmbeddedResource Include="Assets\info.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,6 +28,9 @@
 
   <ItemGroup>
     <EmbeddedResource Update="Views\ShowCloseHaltes.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ViewStoppendeLijnen.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

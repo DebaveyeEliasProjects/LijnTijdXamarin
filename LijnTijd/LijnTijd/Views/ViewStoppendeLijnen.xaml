@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LijnTijd.Views.ViewStoppendeLijnen"
+             Title="VertrekRitten">
+    <StackLayout Padding="16" VerticalOptions="FillAndExpand">
+        <ActivityIndicator x:Name="loaderData2" HorizontalOptions="Center" VerticalOptions="Center"/>
+        <ListView x:Name="lstViewShowHaltes" RowHeight="68" ItemTapped="LstViewShowHaltes_OnItemTapped" SeparatorVisibility="None" VerticalScrollBarVisibility="Never">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell >
+                        <Frame  BackgroundColor="white" Margin="1,4,1,4" Padding="0">
+                            <Grid Padding="8">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="15*"></ColumnDefinition>
+                                    <ColumnDefinition Width="80*"></ColumnDefinition>
+                                    <ColumnDefinition Width="5*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Frame Grid.Column="0" Padding="14" BackgroundColor="{Binding Color}" Margin="-8" CornerRadius="0">
+                                    <Label HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" FontSize="18"  Text="{Binding Lijn.LijnnummerPubliek}"/>
+                                </Frame>
+                                <StackLayout Grid.Column="1" Margin="8,0,0,0">
+                                    <Label Text="{Binding Bestemming}" FontSize="16" FontAttributes="Bold"/>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="50*" />
+                                            <ColumnDefinition Width="50*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Label Grid.Column="0">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="Vertrek: " FontSize="14" FontAttributes="Bold"/>
+                                                    <Span Text="{Binding TimeFormat }" FontSize="14" />
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                    </Grid>
+                                </StackLayout>
+                                <Frame Grid.Column="2" Padding="14" BackgroundColor="Transparent" Margin="-8,-8,-8,-8" CornerRadius="0">
+                                    <Image  WidthRequest="8"  HeightRequest="8" Source="{Binding InfoImage}"/>
+                                </Frame>
+                            </Grid>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

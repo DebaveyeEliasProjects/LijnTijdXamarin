@@ -27,5 +27,17 @@ namespace LijnTijd.Models.Halte
 
         }
 
+        public ImageSource InfoImage
+        {
+            get
+            {
+                return ImageSource.FromResource("LijnTijd.Assets.info.png");
+            }
+
+        }
+        
+        [JsonProperty(PropertyName = "links")]
+        public List<Link> links { get; set; }
+
     }
 }

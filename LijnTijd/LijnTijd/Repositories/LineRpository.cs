@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using LijnTijd.Models;
+using LijnTijd.Models.Doorkomsten;
 using LijnTijd.Models.Halte;
+using LijnTijd.Models.Lijn;
 using Newtonsoft.Json;
 
 namespace LijnTijd.Repositories
@@ -41,6 +44,132 @@ namespace LijnTijd.Repositories
                 throw e;
             }
             
+
+        }
+
+        public static async Task<string> GetLijnHex(string url2)
+        {
+            try
+            {
+                string url = url2;
+
+                using (HttpClient client = getHttpClient())
+                {
+                    string json = await client.GetStringAsync(url);
+                    HexKleur halteGroup = JsonConvert.DeserializeObject<HexKleur>(json);
+
+
+
+
+                    return "#" +  halteGroup.Hex;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
+
+        }
+
+        public static async Task<string> getLijnKleur(long entiteit, long lijn)
+        {
+            try
+            {
+                string url = $"https://api.delijn.be/DLKernOpenData/v1/beta/lijnen/{entiteit}/{lijn}/lijnkleuren";
+
+                using (HttpClient client = getHttpClient())
+                {
+                    string json = await client.GetStringAsync(url);
+                    LijnKleuren halteGroup = JsonConvert.DeserializeObject<LijnKleuren>(json);
+
+                    string hexurl = "";
+
+                    foreach (Link link in halteGroup.Achtergrond.Links)
+                    {
+                        if (link.rel.Equals("detail")) hexurl = link.url;
+                    }
+
+                    string hex = await GetLijnHex(hexurl);
+
+
+                    return hex;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
+
+        }
+
+
+
+        public static async Task<Lijn> GetLijn(long entiteit, long lijn)
+        {
+            try
+            {
+                string url = $"{_URI}lijnen/{entiteit}/{lijn}";
+
+                using (HttpClient client = getHttpClient())
+                {
+                    string json = await client.GetStringAsync(url);
+                    Lijn halteGroup = JsonConvert.DeserializeObject<Lijn>(json);
+                    return halteGroup;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
+
+        }
+
+        public static async Task<DoorkomstGroup> GetDoorKomsten(Halte halte)
+        {
+
+            try
+            {
+                string url = "";
+
+                foreach (Link link in halte.links)
+                {
+
+                    if (link.rel.Equals("dienstregelingen")) url = link.url;
+
+                }
+                
+                using (HttpClient client = getHttpClient())
+                {
+                    string json = await client.GetStringAsync(url);
+                    DoorkomstGroup halteGroup = JsonConvert.DeserializeObject<DoorkomstGroup>(json);
+
+                    foreach (Doorkomst doorkomst in halteGroup.Doorkomsten)
+                    {
+                        foreach (DoorkomstProperties doorkomstPropertiese in doorkomst.Doorkomsts)
+                        {
+                            Lijn lijn = await GetLijn(doorkomstPropertiese.Entiteitnummer,
+                                doorkomstPropertiese.Lijnnummer);
+
+                            string color = await getLijnKleur(lijn.Entiteitnummer, lijn.Lijnnummer);
+
+                            doorkomstPropertiese.Color = color;
+                            doorkomstPropertiese.Lijn = lijn;
+
+                        }
+                    }
+
+
+
+                    return halteGroup;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
 
         }
 

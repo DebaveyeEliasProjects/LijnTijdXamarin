@@ -27,27 +27,10 @@ namespace LijnTijd
 
         private async void Button_OnPressed(object sender, EventArgs e)
         {
+            
+            await Navigation.PushAsync(new ShowCloseHaltes( radiusSlider.Value));
 
-            try
-            {
-                var location = await Geolocation.GetLastKnownLocationAsync();
-
-                HalteGroup halteGroup =
-                    await LineRpository.getHaltesNearby(location.Latitude, location.Longitude, radiusSlider.Value);
-                await Navigation.PushAsync(new ShowCloseHaltes(halteGroup));
-
-            }
-            catch (PermissionException exception)
-            {
-                await DisplayAlert("No permission", "Gelieve uw locatievoorzieningen aan te zetten voor LijnTijd",
-                    "Sluit");
-            }
-            catch (Exception ex)
-            {
-                await DisplayAlert("Nothing found", "Er zijn geen haltes gevonden binnen uw geselecteerde radius",
-                    "Probeer opnieuw");
-
-            }
+            
             
 
         }

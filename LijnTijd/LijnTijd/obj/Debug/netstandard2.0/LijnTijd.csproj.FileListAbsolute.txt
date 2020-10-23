@@ -2,7 +2,6 @@ C:\Users\Elias\Desktop\LijnTijd\LijnTijd\LijnTijd\LijnTijd\bin\Debug\netstandard
 C:\Users\Elias\Desktop\LijnTijd\LijnTijd\LijnTijd\LijnTijd\bin\Debug\netstandard2.0\LijnTijd.dll
 C:\Users\Elias\Desktop\LijnTijd\LijnTijd\LijnTijd\LijnTijd\bin\Debug\netstandard2.0\ref\LijnTijd.dll
 C:\Users\Elias\Desktop\LijnTijd\LijnTijd\LijnTijd\LijnTijd\bin\Debug\netstandard2.0\LijnTijd.pdb
-C:\Users\Elias\Desktop\LijnTijd\LijnTijd\LijnTijd\LijnTijd\obj\Debug\netstandard2.0\LijnTijd.csprojAssemblyReference.cache
 C:\Users\Elias\Desktop\LijnTijd\LijnTijd\LijnTijd\LijnTijd\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\Elias\Desktop\LijnTijd\LijnTijd\LijnTijd\LijnTijd\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 C:\Users\Elias\Desktop\LijnTijd\LijnTijd\LijnTijd\LijnTijd\obj\Debug\netstandard2.0\LijnTijd.AssemblyInfoInputs.cache
@@ -13,3 +12,4 @@ C:\Users\Elias\Desktop\LijnTijd\LijnTijd\LijnTijd\LijnTijd\obj\Debug\netstandard
 C:\Users\Elias\Desktop\LijnTijd\LijnTijd\LijnTijd\LijnTijd\obj\Debug\netstandard2.0\LijnTijd.csproj.CoreCompileInputs.cache
 C:\Users\Elias\Desktop\LijnTijd\LijnTijd\LijnTijd\LijnTijd\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Elias\Desktop\LijnTijd\LijnTijd\LijnTijd\LijnTijd\obj\Debug\netstandard2.0\Views\ShowCloseHaltes.xaml.g.cs
+C:\Users\Elias\Desktop\LijnTijd\LijnTijd\LijnTijd\LijnTijd\obj\Debug\netstandard2.0\Views\ViewStoppendeLijnen.xaml.g.cs
