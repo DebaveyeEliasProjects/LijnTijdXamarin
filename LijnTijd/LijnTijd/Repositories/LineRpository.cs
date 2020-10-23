@@ -127,6 +127,59 @@ namespace LijnTijd.Repositories
 
         }
 
+
+        public static async Task<string> GetAddress(float longt, float lat)
+        {
+            try
+            {
+                string url = $"https://api.opencagedata.com/geocode/v1/json?q={longt}+{lat}&key=daef7b806a7947eda3da3e8746e8658d";
+
+                using (HttpClient client = getHttpClient())
+                {
+                    string json = await client.GetStringAsync(url);
+                    GeoResultGroup halteGroup = JsonConvert.DeserializeObject<GeoResultGroup>(json);
+                    return halteGroup.Results[0].Formatted;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
+
+        }
+
+
+        public static async Task<HalteGroup> GetHaltes(DoorkomstProperties properties)
+        {
+            try
+            {
+                string url = $"{_URI}lijnen/{properties.Entiteitnummer}/{properties.Lijnnummer}/lijnrichtingen/{properties.Richting}/haltes";
+
+                using (HttpClient client = getHttpClient())
+                {
+                    string json = await client.GetStringAsync(url);
+                    HalteGroup halteGroup = JsonConvert.DeserializeObject<HalteGroup>(json);
+
+                    foreach (Halte halte in halteGroup.Haltes)
+                    {
+                        Console.WriteLine(halte.geoCoordinaat.Latitude + " " + halte.geoCoordinaat.Longitude);
+                        halte.Address = await LineRpository.GetAddress(halte.geoCoordinaat.Latitude, halte.geoCoordinaat.Longitude);
+                    }
+
+                    
+                    return halteGroup;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
+
+        }
+
+
         public static async Task<DoorkomstGroup> GetDoorKomsten(Halte halte)
         {
 

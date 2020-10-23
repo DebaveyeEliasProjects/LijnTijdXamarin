@@ -1,10 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "kD9vUpacu5HGmlCvmwRyThW4/bqKcQ6iUYuOk/WFlsZ6f5FrrN2I4QIYJ5HgTiQJ9K1KqKHgMRmQ5ZPYeZvdgA==",
+  "dgSpecHash": "R0VSau4BA3RMNo8/T6zHyHrUMI1XajMP2CbnrvKwieFm0hFc7DucGV/FVyUVyh+lIZgVGxUZRrzI4iWUfCgz2w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Elias\\Desktop\\LijnTijd\\LijnTijd\\LijnTijd\\LijnTijd.Android\\LijnTijd.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Elias\\.nuget\\packages\\gmap.net.core\\2.0.1\\gmap.net.core.2.0.1.nupkg.sha512",
     "C:\\Users\\Elias\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Elias\\.nuget\\packages\\system.data.sqlclient\\4.7.0\\system.data.sqlclient.4.7.0.nupkg.sha512",
+    "C:\\Users\\Elias\\.nuget\\packages\\system.data.sqlite\\1.0.112\\system.data.sqlite.1.0.112.nupkg.sha512",
+    "C:\\Users\\Elias\\.nuget\\packages\\system.data.sqlite.core\\1.0.112\\system.data.sqlite.core.1.0.112.nupkg.sha512",
+    "C:\\Users\\Elias\\.nuget\\packages\\system.security.principal.windows\\4.6.0\\system.security.principal.windows.4.6.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.runtime\\1.1.1.3\\xamarin.android.arch.core.runtime.1.1.1.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.lifecycle.common\\1.1.1.3\\xamarin.android.arch.lifecycle.common.1.1.1.3.nupkg.sha512",

@@ -464,3 +464,9 @@ C:\Users\Elias\Desktop\LijnTijd\LijnTijd\LijnTijd\LijnTijd.Android\obj\Debug\90\
 C:\Users\Elias\Desktop\LijnTijd\LijnTijd\LijnTijd\LijnTijd.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Elias\Desktop\LijnTijd\LijnTijd\LijnTijd\LijnTijd.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\Elias\Desktop\LijnTijd\LijnTijd\LijnTijd\LijnTijd.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
+C:\Users\Elias\Desktop\LijnTijd\LijnTijd\LijnTijd\LijnTijd.Android\obj\Debug\90\android\assets\GMap.NET.Core.dll
+C:\Users\Elias\Desktop\LijnTijd\LijnTijd\LijnTijd\LijnTijd.Android\obj\Debug\90\android\assets\System.Data.SqlClient.dll
+C:\Users\Elias\Desktop\LijnTijd\LijnTijd\LijnTijd\LijnTijd.Android\obj\Debug\90\android\assets\System.Data.SQLite.dll
+C:\Users\Elias\Desktop\LijnTijd\LijnTijd\LijnTijd\LijnTijd.Android\obj\Debug\90\android\assets\System.Data.SQLite.dll.config
+C:\Users\Elias\Desktop\LijnTijd\LijnTijd\LijnTijd\LijnTijd.Android\obj\Debug\90\android\assets\System.Security.Principal.Windows.dll
+C:\Users\Elias\Desktop\LijnTijd\LijnTijd\LijnTijd\LijnTijd.Android\obj\Debug\90\stamp\_CopyConfigFiles.stamp

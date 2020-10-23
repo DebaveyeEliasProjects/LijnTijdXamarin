@@ -4,8 +4,11 @@ public class MonoPackageManager_Resources {
 		/* We need to ensure that "LijnTijd.Android.dll" comes first in this list. */
 		"LijnTijd.Android.dll",
 		"FormsViewGroup.dll",
+		"GMap.NET.Core.dll",
 		"LijnTijd.dll",
 		"Newtonsoft.Json.dll",
+		"System.Data.SQLite.dll",
+		"System.Security.Principal.Windows.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",

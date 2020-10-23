@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
+using System.Threading.Tasks;
+using LijnTijd.Repositories;
 using Newtonsoft.Json;
 using Xamarin.Forms;
 
@@ -17,6 +19,15 @@ namespace LijnTijd.Models.Halte
         public string Name { get; set; }
         [JsonProperty(PropertyName = "afstand")]
         public int Distance { get; set; }
+
+        public GeoCoord geoCoordinaat { get; set; }
+
+
+
+        public string Address { get; set; }
+
+
+        public string Omschrijving { get; set; }
 
         public ImageSource Image
         {

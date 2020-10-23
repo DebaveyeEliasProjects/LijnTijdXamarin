@@ -18,18 +18,6 @@ namespace LijnTijd.Views
         {
             InitializeComponent();
 
-            ToolbarItem item = new ToolbarItem
-            {
-                Text = "BusInfo",
-                IconImageSource = ImageSource.FromResource("Assets.businfo.png"),
-                Order = ToolbarItemOrder.Primary,
-                Priority = 0,
-                
-            };
-
-            // "this" refers to a Page object
-            this.ToolbarItems.Add(item);
-
             lstViewShowHaltes.IsVisible = false;
             loaderData2.IsRunning = true;
             Start(halte);
@@ -61,7 +49,16 @@ namespace LijnTijd.Views
 
         private void LstViewShowHaltes_OnItemTapped(object sender, ItemTappedEventArgs e)
         {
-            throw new NotImplementedException();
+            if (e.Item == null) return;
+
+            //Do stuff
+            DoorkomstProperties properties = (DoorkomstProperties)e.Item;
+            Navigation.PushAsync(new ViewLijnPage(properties));
+
+            if (sender is ListView lv) lv.SelectedItem = null;
+
+            
+
         }
     }
 }

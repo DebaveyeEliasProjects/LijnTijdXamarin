@@ -11,7 +11,7 @@
                 <DataTemplate>
                     <ViewCell >
                         <Frame BackgroundColor="white" Margin="1,4,1,4" Padding="0">
-                            <Grid Padding="8">
+                            <Grid Padding="8" HeightRequest="64">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="15*"></ColumnDefinition>
                                     <ColumnDefinition Width="80*"></ColumnDefinition>
@@ -38,9 +38,6 @@
                                         </Label>
                                     </Grid>
                                 </StackLayout>
-                                <Frame Grid.Column="2" Padding="14" BackgroundColor="Transparent" Margin="-8,-8,-8,-8" CornerRadius="0">
-                                    <Image  WidthRequest="8"  HeightRequest="8" Source="{Binding InfoImage}"/>
-                                </Frame>
                             </Grid>
                         </Frame>
                     </ViewCell>
