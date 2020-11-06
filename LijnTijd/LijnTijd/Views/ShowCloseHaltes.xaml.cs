@@ -14,6 +14,8 @@ namespace LijnTijd.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ShowCloseHaltes : ContentPage
     {
+
+        public static Halte ClickedHalte;
         public ShowCloseHaltes(double Radius)
         {
             InitializeComponent();
@@ -69,6 +71,7 @@ namespace LijnTijd.Views
 
             //Do stuff
             Halte halte = (Halte)e.Item;
+            ClickedHalte = halte;
             Navigation.PushAsync(new ViewStoppendeLijnen(halte));
 
             if (sender is ListView lv) lv.SelectedItem = null;

@@ -43,7 +43,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell >
-                        <Frame BackgroundColor="white" Margin="1,4,1,4" Padding="0">
+                        <Frame BackgroundColor="{Binding Background}" Margin="1,4,1,4" Padding="0">
                             <Grid Padding="8">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="15*"></ColumnDefinition>

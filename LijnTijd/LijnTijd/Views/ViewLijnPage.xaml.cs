@@ -34,6 +34,17 @@ namespace LijnTijd.Views
 
             HalteGroup halteGroup = await LineRpository.GetHaltes(properties);
             loaderData.IsRunning = false;
+
+            foreach (Halte halte in halteGroup.Haltes)
+            {
+                Console.WriteLine(halte.HalteNummer + " - " + ShowCloseHaltes.ClickedHalte.Id);
+                if (halte.HalteNummer == ShowCloseHaltes.ClickedHalte.Id)
+                {
+                    Console.WriteLine("Ja er zit eentje");
+                    halte.isCurrent = true;
+                    break;
+                }
+            }
             lstViewShowHaltes.ItemsSource = halteGroup.Haltes;
 
         }

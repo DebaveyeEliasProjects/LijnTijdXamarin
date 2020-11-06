@@ -15,6 +15,8 @@ namespace LijnTijd.Models.Halte
         public string Type { get; set; }
         [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
+        [JsonProperty(PropertyName = "haltenummer")]
+        public string HalteNummer { get; set; }
         [JsonProperty(PropertyName = "naam")]
         public string Name { get; set; }
         [JsonProperty(PropertyName = "afstand")]
@@ -23,6 +25,25 @@ namespace LijnTijd.Models.Halte
         public GeoCoord geoCoordinaat { get; set; }
 
 
+        public bool isCurrent = false;
+
+        public Color Background
+        {
+            get
+            {
+                if (isCurrent)
+                {
+                    Console.WriteLine("eeee");
+                    return Color.FromHex("85e085");
+                }
+                else
+                {
+                    Console.WriteLine("ffff");
+                    return Color.FromHex("ffffff");
+                }
+            }
+            
+        }
 
         public string Address { get; set; }
 

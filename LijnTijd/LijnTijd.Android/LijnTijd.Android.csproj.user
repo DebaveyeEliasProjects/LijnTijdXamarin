@@ -2,6 +2,6 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <AndroidDesignerPreferredTheme>MainTheme</AndroidDesignerPreferredTheme>
-    <SelectedDevice>Android Emulator</SelectedDevice>
+    <SelectedDevice>Samsung SM-A705FN</SelectedDevice>
   </PropertyGroup>
 </Project>
