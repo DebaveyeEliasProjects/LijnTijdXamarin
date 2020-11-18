@@ -1496,24 +1496,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Elias\\.nuget\\packages\\": {},
+    "C:\\Users\\Hurac\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Elias\\Desktop\\LijnTijd\\LijnTijd\\LijnTijd\\LijnTijd.iOS\\LijnTijd.iOS.csproj",
+      "projectUniqueName": "E:\\Repositories\\LijnTijdXamarin\\LijnTijd\\LijnTijd.iOS\\LijnTijd.iOS.csproj",
       "projectName": "LijnTijd.iOS",
-      "projectPath": "C:\\Users\\Elias\\Desktop\\LijnTijd\\LijnTijd\\LijnTijd\\LijnTijd.iOS\\LijnTijd.iOS.csproj",
-      "packagesPath": "C:\\Users\\Elias\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Elias\\Desktop\\LijnTijd\\LijnTijd\\LijnTijd\\LijnTijd.iOS\\obj\\",
+      "projectPath": "E:\\Repositories\\LijnTijdXamarin\\LijnTijd\\LijnTijd.iOS\\LijnTijd.iOS.csproj",
+      "packagesPath": "C:\\Users\\Hurac\\.nuget\\packages\\",
+      "outputPath": "E:\\Repositories\\LijnTijdXamarin\\LijnTijd\\LijnTijd.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Elias\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Hurac\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1527,8 +1527,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Elias\\Desktop\\LijnTijd\\LijnTijd\\LijnTijd\\LijnTijd\\LijnTijd.csproj": {
-              "projectPath": "C:\\Users\\Elias\\Desktop\\LijnTijd\\LijnTijd\\LijnTijd\\LijnTijd\\LijnTijd.csproj"
+            "E:\\Repositories\\LijnTijdXamarin\\LijnTijd\\LijnTijd\\LijnTijd.csproj": {
+              "projectPath": "E:\\Repositories\\LijnTijdXamarin\\LijnTijd\\LijnTijd\\LijnTijd.csproj"
             }
           }
         }

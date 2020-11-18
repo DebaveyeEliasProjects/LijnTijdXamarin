@@ -26,16 +26,39 @@ namespace LijnTijd.Repositories
 
         }
 
+        public static async Task<Halte> getHalte(long entiteit, string halte)
+        {
+            try
+            {
+
+                string url = $"{_URI}haltes/{entiteit}/{halte}";
+
+                using (HttpClient client = getHttpClient())
+                {
+                    string json = await client.GetStringAsync(url);
+                    Halte halteGroup = JsonConvert.DeserializeObject<Halte>(json);
+
+                    return halteGroup;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
         public static async Task<HalteGroup> getHaltesNearby(double latitude, double longtitude, double distance)
         {
             try
             {
+                
                 string url = $"{_URI}haltes/indebuurt/{latitude},{longtitude}?radius={distance}";
 
                 using (HttpClient client = getHttpClient())
                 {
                     string json = await client.GetStringAsync(url);
                     HalteGroup halteGroup = JsonConvert.DeserializeObject<HalteGroup>(json);
+                    
                     return halteGroup;
                 }
             }
@@ -161,11 +184,22 @@ namespace LijnTijd.Repositories
                     string json = await client.GetStringAsync(url);
                     HalteGroup halteGroup = JsonConvert.DeserializeObject<HalteGroup>(json);
 
+                    List<Halte> haltes = new List<Halte>();
+                    foreach (Halte halte in halteGroup.Haltes)
+                    {
+
+                        Halte h = await getHalte(properties.Entiteitnummer, halte.HalteNummer);
+                        haltes.Add(h);
+                    }
+
+                    halteGroup.Haltes = haltes;
+
                     foreach (Halte halte in halteGroup.Haltes)
                     {
                         Console.WriteLine(halte.geoCoordinaat.Latitude + " " + halte.geoCoordinaat.Longitude);
                         halte.Address = await LineRpository.GetAddress(halte.geoCoordinaat.Latitude, halte.geoCoordinaat.Longitude);
                     }
+
 
                     
                     return halteGroup;

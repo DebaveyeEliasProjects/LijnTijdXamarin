@@ -11,13 +11,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Assets\bus-stop.png" />
+    <None Remove="Assets\busstop.png" />
     <None Remove="Assets\info.png" />
+    <None Remove="Assets\stop.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Assets\bus-stop.png" />
+    <Resource Include="Assets\busstop.png" />
     <EmbeddedResource Include="Assets\info.png" />
+    <EmbeddedResource Include="Assets\stop.png" />
   </ItemGroup>
 
   <ItemGroup>

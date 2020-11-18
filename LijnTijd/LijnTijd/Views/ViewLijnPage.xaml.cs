@@ -52,6 +52,8 @@ namespace LijnTijd.Views
         private void LstViewShowHaltes_OnItemTapped(object sender, ItemTappedEventArgs e)
         {
             if (e.Item == null) return;
+
+
             if (sender is ListView lv) lv.SelectedItem = null;
         }
     }
